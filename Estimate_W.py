@@ -15,7 +15,6 @@ import warnings
 warnings.simplefilter('ignore', Image.DecompressionBombWarning)
 
 
-
 def Wfast(img,nstains,lamb,num_patches,patchsize,level,background_correction=False):
 	
 	param=definePar(nstains,lamb)

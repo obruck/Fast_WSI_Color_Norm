@@ -59,17 +59,18 @@ lamb=0.01     #default value sparsity regularization parameter
 op=0
 
 if op==0:
-	filename="/home/deepakanand/Downloads/registered_data_for_color_normalization/1HE.tif"
+	# filename="/home/deepakanand/Downloads/registered_data_for_color_normalization/1HE.tif"
 	# filename="./experiment_CN/PrognosisTMABlock2_B_2_5_H&E1.tif"
 	# filename="./Target/TCGA-E2-A14V-01Z-00-DX1.tif"
 	# filename = "./Target/he.png"
-	print filename
-	run_stainsep(filename,nstains,lamb)
+    filename="./Desktop/aml_downscaled/export.png"
+    print filename
+    run_stainsep(filename,nstains,lamb)
 
 
 elif op==1:
-	input_direc="./deepak_he/"
-	output_direc="./stain_separated/"
+	input_direc="./Desktop/test1"
+	output_direc="./Desktop/test2"
 	if not os.path.exists(output_direc):
 		os.makedirs(output_direc)
 	file_type="*"
@@ -84,17 +85,17 @@ elif op==1:
 
 elif op==2:
 	level=0
-	output_direc="./new_tests/"
+	output_direc="./Desktop/test2/"
 	if not os.path.exists(output_direc):
 		os.makedirs(output_direc)
 
-	source_filename="./Test/WSI/57_HE: 10000x11534.png"
+	source_filename="./Desktop/test1/ext_only_Riku_BM_HA11_467B~BImg-000411.png"
 	# source_filename="./experiment_CN/PrognosisTMABlock3_A_5_6_H&E1.tif"
 	#source_filename="./Test0/20_HE(28016,22316).png"
 	#source_filename="./Source/TUPAC-TR-004.svs"
 	#source_filename="../../Downloads/01/no1_HE.ndpi"
 	#source_filename = "../../Documents/Shubham/Data/Test Data/78/78_HE.ndpi"
-	target_filename="./Target/TCGA-E2-A14V-01Z-00-DX1.tif"
+	target_filename="./Desktop/test1/ext_only_Riku_BM_HA11_2706B~AImg-000220.png"
 	# target_filename="b048.tif"
 
 	if not os.path.exists(source_filename):
@@ -111,13 +112,13 @@ elif op==3:
 	level=0
 
 	# input_direc="../experiment_CN/"
-	input_direc="../Test/WSI patches/"
-	output_direc="./new_tests_WSI/GPU/"
+	input_direc="../Desktop/test1/"
+	output_direc="./Desktop/test2/"
 	if not os.path.exists(output_direc):
 		os.makedirs(output_direc)
 	file_type="*.*"
-	#file_type="*.svs" #all of these file types from input_direc will be normalized
-	target_filename="../Target/TCGA-E2-A14V-01Z-00-DX1.tif"
+    #file_type="*.svs" #all of these file types from input_direc will be normalized
+	target_filename="../Desktop/test1/ext_only_Riku_BM_HA11_2706B~AImg-000220.png"
 	if not os.path.exists(target_filename):
 		print "Target file does not exist"
 		sys.exit()

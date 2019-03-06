@@ -12,7 +12,6 @@ tf.logging.set_verbosity(tf.logging.ERROR)
 
 from Estimate_W import Wfast
 
-
 def run_batch_colornorm(filenames,nstains,lamb,output_direc,img_level,background_correction=True,config=None):	
 
 	if config is None:
